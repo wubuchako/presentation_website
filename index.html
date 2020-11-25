@@ -29,7 +29,7 @@
 
   <!-- page3 -->
   <section id="page-3" class="page">
-    <h1>Page 2</h1>
+    <h1>Page 3</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fugiat commodi pariatur nobis quo perferendis culpa odio fugit, illum accusantium placeat dolorum, reprehenderit porro fuga earum expedita necessitatibus sapiente aut. Ea officia hic tempora quis blanditiis magni fugit molestiae eos.</p>
     <div>
       <a href="#page-2" class="btn btn-dark">Prev Page <i class="fas fa-arrow-circle-up"></i></a>
@@ -39,11 +39,33 @@
 
   <!-- page4 -->
   <section id="page-4" class="page">
-    <h1>Page 2</h1>
+    <h1>Page 4</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo fugiat commodi pariatur nobis quo perferendis culpa odio fugit, illum accusantium placeat dolorum, reprehenderit porro fuga earum expedita necessitatibus sapiente aut. Ea officia hic tempora quis blanditiis magni fugit molestiae eos.</p>
     <div>
       <a href="#page-3" class="btn">Prev Page <i class="fas fa-arrow-circle-up"></i></a>
     </div>
   </section>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script>
+    // Smooth Scrolling
+    $('.btn').on('click', function(event) {
+        if (this.hash !== '') {
+          event.preventDefault();
+          const hash = this.hash;
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top
+            },
+            900
+          );
+        }
+      });
+  </script>
 </body>
 </html>
